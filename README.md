@@ -10,7 +10,9 @@ Uses:
 ## Getting Started
 Make sure you have the following installed:
 
+ - Django
  - Python 2.7+
+ - Scikit-learn
  - MongoDB 3.0+
 
 Set MONGODB settings in line 83 of file tnm-neural/settings.py

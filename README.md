@@ -35,16 +35,19 @@ pip install django
 ```
 
 scikit-learn:
+If you already have a working installation of numpy and scipy
 ```sh
-"If you already have a working installation of numpy and scipy, the easiest way to install scikit-learn is using pip"
 pip install -U scikit-learn
 ```
-
-If you are in Windows I recommend installing the numpy and scipy binaries, then run the PIP command.
-
+Otherwise you need to install them, if you are in Windows I recommend installing the numpy and scipy binaries, then run the PIP command.
+```sh
 NumPY -> https://sourceforge.net/projects/numpy/files/
 SciPY -> https://sourceforge.net/projects/scipy/files/
-
+```
+Download both latest .exe from these urls, then:
+```sh
+pip install -U scikit-learn
+```
 ## Starting the server
 To start the Django server located at `./` execute:
 ```sh

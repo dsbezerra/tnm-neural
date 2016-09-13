@@ -15,6 +15,7 @@ Make sure you have the following installed:
  - Scikit-learn
  - MongoDB 3.0+
 
+(Optional) I am not using this, yet!
 Set MONGODB settings in line 83 of file tnm-neural/settings.py
 Example:
 ```sh

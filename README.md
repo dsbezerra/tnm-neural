@@ -1,5 +1,5 @@
 # TNM Neural Network
-# Network used to detect categories from text.
+Network used to detect categories from text.
 
 Uses:
 

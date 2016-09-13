@@ -27,12 +27,17 @@ _MONGODB_DATABASE_HOST = \
     % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
 ```
 
-You need to install scikit-learn and Django, I recommend using PIP for python
+If you don't have scikit-learn and Django, I recommend using PIP to install them
+
+Django:
+```sh
+pip install django
+```
+
+scikit-learn:
 ```sh
 "If you already have a working installation of numpy and scipy, the easiest way to install scikit-learn is using pip"
 pip install -U scikit-learn
-
-pip install django
 ```
 
 If you are in Windows I recommend installing the numpy and scipy binaries, then run the PIP command.

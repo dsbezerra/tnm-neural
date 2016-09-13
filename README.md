@@ -28,6 +28,8 @@ _MONGODB_DATABASE_HOST = \
     % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
 ```
 
+## Installing dependencies
+
 If you don't have scikit-learn and Django, I recommend using PIP to install them
 
 Django:

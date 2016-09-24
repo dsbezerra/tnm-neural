@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k5)go6)^y+8oi4=hnhw=!i*5m&9@^t2(m97bos^v^3%x03ex3z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -80,15 +80,15 @@ DATABASES = {
     }
 }
 
-#_MONGODB_USER = 'tnm-neural'
-#_MONGODB_PASSWD = '123456'
-#_MONGODB_HOST = '127.0.0.1'
-#_MONGODB_NAME = 'classifier'
-#_MONGODB_DATABASE_HOST = \
-#    'mongodb://%s:%s@%s/%s' \
-#    % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
-#
-#mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
+_MONGODB_USER = 'tnm-neural'
+_MONGODB_PASSWD = '123456'
+_MONGODB_HOST = '127.0.0.1'
+_MONGODB_NAME = 'classifier'
+_MONGODB_DATABASE_HOST = \
+    'mongodb://%s:%s@%s/%s' \
+    % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
+
+mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
 
 AUTHENTICATION_BACKENDS = (
     'mongoengine.django.auth.MongoEngineBackend',

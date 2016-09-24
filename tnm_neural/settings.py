@@ -28,9 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # TODO(diego): Remove this when deploying for REAL
-    '127.0.0.1',
-    'localhost',
-    'tnm-*.herokuapp.com'
+    '*',
+    #'tnm-*.herokuapp.com'
 ]
 
 

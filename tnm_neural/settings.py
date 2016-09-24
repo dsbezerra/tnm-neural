@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tnm_neural.category_classifier'
+    'category_classifier'
 ]
 
 MIDDLEWARE = [

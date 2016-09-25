@@ -24,6 +24,8 @@ def process(request):
             category_classifier = CategoryClassifier(json_body['input'])
             results = category_classifier.run()
 
+            print results
+
             if results:
                 # TODO(diego): Use database to save predicted values and to control duplication
                 # If array with more than one record, use Bulk from mongo to perform an efficient
@@ -32,6 +34,7 @@ def process(request):
                 # For now just send the information back to client
 
                 return JsonResponse(results)
-            return HttpResponse()
+            else:
+                return HttpResponse()
         else:
             return HttpResponse()

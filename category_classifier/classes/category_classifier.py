@@ -29,6 +29,7 @@ class CategoryClassifier:
     # Runs the neural network
     def run(self):
         if self.input:
+            print 'Running...'
             return self.process()
         else:
             return -1

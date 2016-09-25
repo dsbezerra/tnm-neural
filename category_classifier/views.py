@@ -1,9 +1,6 @@
-import mongoengine
 import json
 
 from .classes import CategoryClassifier
-
-from .models import ClassifiedCategory
 
 from django.http import HttpResponse
 from django.http import JsonResponse
@@ -12,7 +9,7 @@ from django.http import JsonResponse
 
 # Test
 def index(request):
-    return JsonResponse(json.loads(ClassifiedCategory.objects.to_json()), safe=False)
+    return HttpResponse('Hello!')
 
 # Process input and responds with predicted data
 def process(request):

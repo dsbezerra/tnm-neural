@@ -46,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -89,12 +89,12 @@ WSGI_APPLICATION = 'tnm_neural.wsgi.application'
 #_MONGODB_DATABASE_HOST = \
 #    'mongodb://%s:%s@%s/%s' \
 #    % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
-#
+
 #mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)
 
-AUTHENTICATION_BACKENDS = (
-    'mongoengine.django.auth.MongoEngineBackend',
-)
+#AUTHENTICATION_BACKENDS = (
+#    'mongoengine.django.auth.MongoEngineBackend',
+#)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

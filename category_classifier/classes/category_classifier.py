@@ -29,7 +29,7 @@ class CategoryClassifier:
     # Runs the neural network
     def run(self):
         if self.input:
-            print 'Running...'
+            #print 'Running...'
             return self.process()
         else:
             return -1
@@ -74,8 +74,8 @@ class CategoryClassifier:
                 return -1
 
         except IOError:
-            print """Trained network not found!\n
-                     Please check if the files exists in specified paths."""
+            #print """Trained network not found!\n
+            #         Please check if the files exists in specified paths."""
             return -1
 
     # Setters

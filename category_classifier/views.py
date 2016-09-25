@@ -21,7 +21,7 @@ def process(request):
         category_classifier = CategoryClassifier(json_body['input'])
         results = category_classifier.run()
         
-        print results
+        #print results
         
         if results:            
             return JsonResponse(results)

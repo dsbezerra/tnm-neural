@@ -8,14 +8,14 @@ from sklearn.externals import joblib
 
 # Script working path
 WORKING_PATH = os.getcwd()
-APP_PATH = WORKING_PATH + '\\category_classifier'
+APP_PATH = WORKING_PATH + '/category_classifier'
 
 # Serialized trained neural network data paths
-MULTINOMIAL_NB_PATH = APP_PATH + '\\data\\classifier\\tnm_category_multinomial_nb.pkl'
-VECTORIZER_PATH     = APP_PATH + '\\data\\classifier\\tnm_category_vectorizer.pkl'
+MULTINOMIAL_NB_PATH = APP_PATH + '/data/classifier/tnm_category_multinomial_nb.pkl'
+VECTORIZER_PATH     = APP_PATH + '/data/classifier/tnm_category_vectorizer.pkl'
 
 # CATEGORIES
-CATEGORIES_LIST_PATH = APP_PATH + '\\data\\category_list.json'
+CATEGORIES_LIST_PATH = APP_PATH + '/data/category_list.json'
 
 class CategoryClassifier:
     

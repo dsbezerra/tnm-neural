@@ -27,7 +27,7 @@ class Trainer:
             names = ["category_name", "id", "database_id", "description"]
 
         try:
-            root_path = os.getcwd() + '\\category_classifier\\'
+            root_path = os.getcwd() + '/category_classifier/'
             self.data_table = pd.read_table(root_path + path, header=header, names=names)
             if not self.data_table.empty:
                 print "Data loaded."

@@ -121,8 +121,3 @@ class Trainer:
 
     def get_stopwords(self):
         return self.stop_words
-
-trainer = Trainer()
-stop_words = trainer.fetch_stopwords()
-if stop_words:
-    print stop_words

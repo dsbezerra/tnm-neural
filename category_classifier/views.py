@@ -23,15 +23,8 @@ def process(request):
         
         print results
         
-        if results:
-            # TODO(diego): Use database to save predicted values and to control duplication
-            # If array with more than one record, use Bulk from mongo to perform an efficient
-            # insert into database, otherwise just use a normal insert operation. 
-            
-            # For now just send the information back to client
-            
+        if results:            
             return JsonResponse(results)
-        else:
-            return HttpResponse()
-    else:
-        return HttpResponse()
+
+
+    return HttpResponse('Hello!')

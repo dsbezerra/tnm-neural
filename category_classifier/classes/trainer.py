@@ -217,13 +217,3 @@ class Trainer:
 
     def get_stopwords(self):
         return self.stop_words
-
-
-trainer = Trainer()
-trainer.authenticate()
-input = trainer.fetch_all()
-
-trainer.convert_input_to_tsv_file(input, "all.tsv")
-
-trainer.load_data("all.tsv")
-print trainer.data_table

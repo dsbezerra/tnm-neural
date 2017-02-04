@@ -34,10 +34,12 @@ def process(request):
 
 # Train current network with the new input data
 def train(request):
+    
     if request.method != "POST":
         return HttpResponse()
 
     if request.body:
+        
         json_body = json.loads(request.body)
 
         if not json_body:
@@ -45,12 +47,18 @@ def train(request):
                 'success': False,
                 'message': 'Invalid request.'
             })
+
+        if len(json_body['input']) <= 1:
+            return JsonResponse({
+                'success': False,
+                'message': 'Input data must greater than 1.'
+            })
         
         task_id = uuid.uuid4()
         
         trainer = Trainer()
 
-        file_path = "../data/%s.tsv" % (str(task_id))
+        file_path = "category_classifier/data/tables/%s.tsv" % (str(task_id))
         
         output_path = trainer.convert_input_to_tsv_file(json_body['input'], file_path)
 

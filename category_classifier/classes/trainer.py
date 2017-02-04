@@ -50,11 +50,11 @@ class Trainer:
             self.data_table = data_table
 
     # Save the current state of an object to disk
-    def save_object_to_disk(classifier, file_path):
-        joblib.dump(classifier, file_name);
+    def save_object_to_disk(self, classifier, file_path):
+        joblib.dump(classifier, file_path);
 
     # Load the current state of an object from disk
-    def load_object_from_disk(file_path):
+    def load_object_from_disk(self, file_path):
         return joblib.load(file_path)
 
     # Load train data
@@ -79,7 +79,7 @@ class Trainer:
             print "There's no such file in this path!"
 
     # Train the network and test to see accuracy
-    def train(self, nb_alpha=1.0, random_state=1, use_saved=True):
+    def train(self, nb_alpha=1.0, random_state=1, persist_new_trained=True, use_saved=True):
         data_table = self.data_table
         data_size = len(data_table)
         if data_size > 0:
@@ -126,6 +126,10 @@ class Trainer:
             print "Predicted output precision: %s" % self.accuracy
             # Print vocabulary
             #print ",\n".join(vect.vocabulary_)
+
+            if persist_new_trained:
+                self.save_object_to_disk(self.vect, VECTORIZER_PATH)
+                self.save_object_to_disk(self.nb, MULTINOMIAL_NB_PATH)
             
             return self.accuracy;
             

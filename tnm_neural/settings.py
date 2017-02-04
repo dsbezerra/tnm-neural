@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k5)go6)^y+8oi4=hnhw=!i*5m&9@^t2(m97bos^v^3%x03ex3z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # TODO(diego): Remove this when deploying for REAL
 # Add this 'tnm-*.herokuapp.com'

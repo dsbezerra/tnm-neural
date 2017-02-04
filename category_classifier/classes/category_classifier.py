@@ -15,6 +15,7 @@ MULTINOMIAL_NB_PATH = APP_PATH + '/data/classifier/tnm_category_multinomial_nb.p
 VECTORIZER_PATH     = APP_PATH + '/data/classifier/tnm_category_vectorizer.pkl'
 
 # CATEGORIES
+# Don't forget to update this list whenever there's a new category in the database
 CATEGORIES_LIST_PATH = APP_PATH + '/data/category_list.json'
 
 class CategoryClassifier:
@@ -75,7 +76,7 @@ class CategoryClassifier:
 
         except IOError:
             #print """Trained network not found!\n
-            #         Please check if the files exists in specified paths."""
+            #         Please check if the files exist in specified paths."""
             return -1
 
     # Setters
